@@ -38,13 +38,10 @@ QuarkCloud通过精心选型，以统一接口规范和可拔插技术，让业�
 #### 成员列表
 
 
-序号 | 用户名
----|---
-1 | caihenry
-2 | djxvic
-3 | neonotes
-4 | neulsq
-5 | romandion
-6 | rtubo
-7 | yehaizi
-
+序号 | 用户名 |序号 | 用户名 
+---|---|---|---
+1 | caihenry|2 | djxvic
+3 | neonotes|4 | neulsq
+5 | romandion|6 | rtubo
+7 | yehaizi|8 | SnowLeopard 
+9 | huoyinglyf| 
