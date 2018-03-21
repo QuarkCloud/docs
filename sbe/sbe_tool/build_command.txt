@@ -1,0 +1,8 @@
+java -Dsbe.generate.ir=true -Dsbe.target.language=Cpp -Dsbe.target.namespace=sbe -Dsbe.output.dir=include/gen -Dsbe.errorLog=yes -jar sbe-all/build/libs/sbe-all-1.7.7-SNAPSHOT.jar my_sbe_input.xml
+
+
+
+-Dsbe.target.language="uk.co.real_logic.sbe.generation.csharp.CSharp"
+
+
+
