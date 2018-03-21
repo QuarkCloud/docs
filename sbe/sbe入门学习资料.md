@@ -8,7 +8,7 @@ Windows和Linux下都可以编译，编译需要依赖Jdk（我用的是Jdk1.8�
 
 如果是Windows打开VS命令提示符，cd命令切换到sbe源码目录，然后输入 **gradlew** 开始编译，编译完成后显示如下：
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/build_sbe_tool.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/build_sbe_tool.jpg)
 
 编译成功后会生成\sbe-all\build\libs\sbe-all-1.7.10-SNAPSHOT.jar，该文件用来将xml的协议文件生成相应的C++代码或者C#代码。同时还生成了SBE的Demo-Car代码，在sbe-benchmarks\build\generated\uk\co\real\_logic\sbe\benchmarks目录下，如果需要看xml的协议文件，该文件在simple-binary-encoding-master\sbe-samples\src\main\resources\example-schema.xml
 
@@ -16,7 +16,7 @@ Windows和Linux下都可以编译，编译需要依赖Jdk（我用的是Jdk1.8�
 
 java -Dsbe.generate.ir=true -Dsbe.target.language= **Cpp** -Dsbe.target.namespace=sbe -Dsbe.output.dir=. -Dsbe.errorLog=yes -jar sbe-all/build/libs/sbe-all-1.7.10-SNAPSHOT.jar example-schema.xml
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/compile_command.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/compile_command.jpg)
 
 此处需要注意的是sbe-all-1.7.10-SNAPSHOT.jar文件的路径，注意如果生成的C#代码，-Dsbe.target.language标签值为：-Dsbe.target.language=&quot;uk.co.real\_logic.sbe.generation.csharp.CSharp&quot;   _&lt;引号不能省略&gt;_
 
@@ -24,7 +24,7 @@ sbe-all-1.7.10-SNAPSHOT.jar文件可以放在任何地方，只要指定了具�
 
 生成的CPP文件如下：
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/gen_file_lists.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/gen_file_lists.jpg)
 
 以上就是Windows下，编译sbe源码和将Demo-Car的xml文件生成CPP或者C#的过程。
 
@@ -32,23 +32,23 @@ Linux下的处理过程也是一样，作者Windows下和Linux全都试过，都
 
 对于源码目录下的，cppbuild和csharp目录，前者是用来生成Cpp版本的lib库文件，后者是用来生成C#的库文件，生成方法如果是Linux下编译比较简单了，直接用网站上提供的命令就可以。如下图所示。
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/cpp_build.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/cpp_build.jpg)
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/C%23_build.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/C%23_build.jpg)
 
 如果是Windows下生成库文件，笔者仅试过Cpp版本，需要先安装cmake（gui），安装好之后，进行如下配置（此处需要注意，安装的VS版本与cppbuild-vs2015.cmd中的版本号一致，笔者用的是VS2017，故版本号是15）：
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/config_vs_version_for_gen_cpp_lib.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/config_vs_version_for_gen_cpp_lib.jpg)
 
 修改好配置之后，进行cmake配置，
 
 #
 
-![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/cmake_config.jpg)
+![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/cmake_config.jpg)
 
 注意&quot;source code&quot;和&quot;build the binaries&quot;路径选择，配置后先&quot;Configure&quot;然后再&quot;Generate&quot;，当出现Configure done和Generating done之后表明已经生成成功，此时选择&quot;Open Project&quot;打开VS工程，&quot;sbe工程&quot;就是sbe的库工程，直接生成lib库就可以，至此sbe的库生成成功了。
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/sbe_project.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/sbe_project.jpg)
 
 # 2. xml原型文件学习介绍
 
@@ -58,7 +58,7 @@ https://github.com/real-logic/simple-binary-encoding/wiki/FIX-SBE-XML-Primer
 
 SBE总的学习Wiki很不错，有时间的同学一定要看看，因为上面包括了SBE的编码结构，
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/sbe_struct.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/sbe_struct.jpg)
 
 Wiki学习资料地址：https://github.com/real-logic/simple-binary-encoding/wiki
 
@@ -72,4 +72,4 @@ Wiki学习资料地址：https://github.com/real-logic/simple-binary-encoding/wi
 
 sbe的库文件在下图所示路径下（前提是步骤1中已经生成过）
 
- ![](https://github.com/neulsq/QuarkCloud/docs/raw/master/sbe/file/lib_path.jpg)
+ ![](https://github.com/QuarkCloud/docs/blog/master/sbe/file/lib_path.jpg)
