@@ -4,7 +4,7 @@ GitHub地址：https://github.com/real-logic/simple-binary-encoding
 
 # 1. SBE源码编译过程说明及注意事项
 
-Windows和Linux下都可以编译，编译需要依赖Jdk（我用的是Jdk1.8），先下载安装Jdk并配置好Java环境变量（配置环境变量去Google搜一下），另外还需要依赖ant，但是会自动下载，如果自动下去Google下在配置好环境变量再执行编译。
+Windows和Linux下都可以编译，编译需要依赖Jdk（我用的是Jdk1.8），先下载安装Jdk并配置好Java环境变量（配置环境变量去Google搜一下），另外还需要依赖ant，但是会自动下载。如果没自动下载，去Google搜索下载安装，配置好环境变量后再执行编译。
 
 如果是Windows打开VS命令提示符，cd命令切换到sbe源码目录，然后输入 **gradlew** 开始编译，编译完成后显示如下：
 
